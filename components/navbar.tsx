@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Eazybot from "@/public/images/Eazybot-Logo.png";
 
 const Navbar = () => {
@@ -12,29 +13,29 @@ const Navbar = () => {
         <div id="nav-navigation" className="flex">
           <ul className="flex flex-row space-x-12">
             <li>
-              <a href="#" className="text-[#1CC1F4] ">
+              <Link href="#" className="text-[#1CC1F4] ">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#">About Us</a>
+              <Link href="#">About Us</Link>
             </li>
             <li>
-              <a href="#">Pricing</a>
+              <Link href="#">Pricing</Link>
             </li>
             <li>
-              <a href="#">Contact Us</a>
+              <Link href="#">Contact Us</Link>
             </li>
             <li>
-              <a href="#">Help</a>
+              <Link href="#">Help</Link>
             </li>
             <li>
-              <a
+              <Link
                 href="#"
                 className="border-2 border-black rounded-full px-6 py-3"
               >
                 LOGIN
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
