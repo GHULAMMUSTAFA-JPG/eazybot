@@ -1,33 +1,37 @@
+"use client";
 import Image from "next/image";
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Avatar from "@/public/images/Avatar.png";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const testimonials = [
   {
     quote:
       "Beautifully presented and with professional-grade design, EazyBot is in a different league compared to other cryptocurrency trading bots.",
-    icon: "https://cdn-icons-png.flaticon.com/512/482/482508.png", // Example icon URL
+    icon: Avatar,
   },
   {
     quote:
-      "Beautifully presented and with professional-grade design, EazyBot is in a different league compared to other cryptocurrency trading bots.",
-    icon: "https://cdn-icons-png.flaticon.com/512/482/482508.png", // Example icon URL
+      "EazyBot is the best cryptocurrency trading bot platform for a beginner bot trader.",
+    icon: Avatar,
   },
   {
     quote:
-      "Beautifully presented and with professional-grade design, EazyBot is in a different league compared to other cryptocurrency trading bots.",
-    icon: "https://cdn-icons-png.flaticon.com/512/482/482508.png", // Example icon URL
-  },
-  {
-    quote:
-      "Beautifully presented and with professional-grade design, EazyBot is in a different league compared to other cryptocurrency trading bots.",
-    icon: "https://cdn-icons-png.flaticon.com/512/482/482508.png", // Example icon URL
+      "EazyBot is a truly amazing tool. I made a profit the same day I started. And learned so much from the community in the process. Incredible!",
+    icon: Avatar,
   },
 ];
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 3000); // Auto-scroll every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [currentIndex]);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
@@ -42,40 +46,165 @@ const Carousel = () => {
   };
 
   return (
-    <div className="flex justify-center items-center mt-16">
-      <div className="flex items-center space-x-4">
+    <div className="flex justify-center items-center mt-16 w-full ">
+      <div className="flex items-center space-x-6">
         {/* Previous Button */}
         <button
           onClick={handlePrev}
-          className="p-3 rounded-full border border-gray-300 hover:bg-gray-200 transition duration-300"
+          className="p-2 rounded-full border border-black"
           aria-label="Previous"
         >
-          <FaChevronLeft className="text-gray-600" />
+          <FaChevronLeft className="text-black" />
         </button>
 
         {/* Testimonial Content */}
-        <div className="flex flex-col items-center space-y-4 text-center max-w-lg">
-          <Image
-            src={testimonials[currentIndex].icon}
-            alt="Icon"
-            className="w-16 h-16 rounded-full bg-blue-100 p-4"
-          />
-          <p className="text-gray-700 font-medium text-lg">
-            {testimonials[currentIndex].quote}
-          </p>
+        <div className="overflow-hidden relative w-full max-w-xl">
+          <div
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 w-full flex flex-row items-center space-x-4 text-center"
+              >
+                <Image
+                  src={testimonial.icon}
+                  alt="Icon"
+                  width={80}
+                  height={80}
+                  className=""
+                />
+                <p className="text-gray-700 text-start leading-6 font-light text-md tracking-wide">
+                  {testimonial.quote}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Next Button */}
         <button
           onClick={handleNext}
-          className="p-3 rounded-full border border-gray-300 hover:bg-gray-200 transition duration-300"
+          className="p-2 rounded-full border border-black"
           aria-label="Next"
         >
-          <FaChevronRight className="text-gray-600" />
+          <FaChevronRight className="text-black" />
         </button>
       </div>
     </div>
   );
 };
 
-export default Carousel;
+const Testimonial = () => {
+  return (
+    <div className="h-[400px] px-48 bg-white flex flex-col justify-start pt-20">
+      <div className="text-4xl leading-normal font-semibold">
+        <span className="text-hcolor">The Proof?</span> Listen To
+        <br /> What These People Are Saying…
+      </div>
+      <div className="flex justify-center items-center">
+        <Carousel />
+      </div>
+    </div>
+  );
+};
+
+export default Testimonial;
+
+// "use client";
+// import Image from "next/image";
+// import React from "react";
+// import { useState } from "react";
+// import Avatar from "@/public/images/Avatar.png";
+// import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+// // import { IoIosArrowDropleft } from "react-icons/io";
+// // import { IoIosArrowDropright } from "react-icons/io";
+
+// const testimonials = [
+//   {
+//     quote:
+//       "Beautifully presented and with professional-grade design, EazyBot is in a different league compared to other cryptocurrency trading bots.",
+//     icon: Avatar,
+//   },
+//   {
+//     quote:
+//       "EazyBot is the best cryptocurrency trading bot platform for a beginner bot trader.",
+//     icon: Avatar, // Example icon URL
+//   },
+//   {
+//     quote:
+//       "EazyBot is a truly amazing tool. I made a profit the same day I started. And learned so much from the community in the process. Incredible!",
+//     icon: Avatar,
+//   },
+// ];
+
+// const Carousel = () => {
+//   const [currentIndex, setCurrentIndex] = useState(0);
+
+//   const handleNext = () => {
+//     setCurrentIndex((prevIndex) =>
+//       prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+//     );
+//   };
+
+//   const handlePrev = () => {
+//     setCurrentIndex((prevIndex) =>
+//       prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+//     );
+//   };
+
+//   return (
+//     <div className="flex justify-center items-center mt-16 w-full ">
+//       <div className="flex items-center space-x-6">
+//         {/* Previous Button */}
+//         <button
+//           onClick={handlePrev}
+//           className="p-2 rounded-full border border-black"
+//           aria-label="Previous"
+//         >
+//           <FaChevronLeft className="text-black" />
+//         </button>
+
+//         {/* Testimonial Content */}
+//         <div className="flex flex-row space-x-4 items-center space-y-4 text-center max-w-xl w-full">
+//           <Image
+//             src={testimonials[currentIndex].icon}
+//             alt="Icon"
+//             width={80}
+//             height={80}
+//             className=""
+//           />
+//           <p className="text-gray-700 text-start leading-6 font-light text-md tracking-wide">
+//             {testimonials[currentIndex].quote}
+//           </p>
+//         </div>
+
+//         {/* Next Button */}
+//         <button
+//           onClick={handleNext}
+//           className="p-2 rounded-full border border-black"
+//           aria-label="Next"
+//         >
+//           <FaChevronRight className="text-black" />
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
+
+// const Testimonial = () => {
+//   return (
+//     <div className="h-[400px] px-48 bg-white  flex flex-col justify-start pt-20">
+//       <div className="text-4xl leading-normal font-semibold">
+//         <span className="text-hcolor">The Proof?</span> Listen To
+//         <br /> What These People Are Saying…
+//       </div>
+//       <div className="flex justify-center items-center ">
+//         <Carousel />
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Testimonial;

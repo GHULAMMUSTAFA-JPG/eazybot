@@ -7,7 +7,7 @@ export default function TradingBot() {
   return (
     <>
       <div
-        className="h-[1200px] flex flex-col items-start justify-start index-0 bg-cover bg-local bg-center relative"
+        className="h-[1250px] flex flex-col items-start justify-start index-0 bg-cover bg-local bg-center relative"
         style={{ backgroundImage: `url(${bgimage.src})` }}
       >
         <div className="flex flex-row ml-40 mt-20 h-fit ">
@@ -84,8 +84,6 @@ const TradingBotB = () => {
         {/* Right Side - Video with Background */}
         <div className="relative w-1/2 flex justify-center items-center">
           <div className="relative w-full h-0 pb-[56.25%]">
-            {" "}
-            {/* Aspect Ratio 16:9 */}
             {/* Background Image (applied to video using a wrapper) */}
             <div
               className="absolute inset-0 bg-cover bg-center rounded-lg z-0"
