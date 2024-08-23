@@ -4,6 +4,7 @@ import Hero from "@/components/hero";
 import CrypTotrading from "@/components/cryptotrading";
 import TradingBot from "@/components/tradingbot";
 import StartLearning from "@/components/startlearning";
+import AutomatedTrading from "@/components/automatedtrading";
 import Testimonial from "@/components/testimonial";
 import GetStarted from "@/components/getstarted";
 import Trade from "@/components/trade";
@@ -17,6 +18,7 @@ export default function Home() {
       <CrypTotrading />
       <TradingBot />
       <StartLearning />
+      <AutomatedTrading />
       <Testimonial />
       <GetStarted />
       <Trade />
