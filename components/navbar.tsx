@@ -18,16 +18,24 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="#">About Us</Link>
+              <Link href="#" className="hover:text-hcolor">
+                About Us
+              </Link>
             </li>
             <li>
-              <Link href="#">Pricing</Link>
+              <Link href="#" className="hover:text-hcolor">
+                Pricing
+              </Link>
             </li>
             <li>
-              <Link href="#">Contact Us</Link>
+              <Link href="#" className="hover:text-hcolor">
+                Contact Us
+              </Link>
             </li>
             <li>
-              <Link href="#">Help</Link>
+              <Link href="#" className="hover:text-hcolor">
+                Help
+              </Link>
             </li>
             <li>
               <Link
