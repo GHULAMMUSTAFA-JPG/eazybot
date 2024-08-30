@@ -6,10 +6,10 @@ import phone from "@/public/images/mobile-img.png";
 const GetStarted = () => {
   return (
     <div
-      className="flex px-48 h-[600px] "
+      className="flex flex-col lg:flex-row px-6 xl:px-48 h-fit lg:h-[600px] "
       style={{ backgroundImage: `url(${bgform.src})`, backgroundSize: "cover" }}
     >
-      <div className="flex flex-col justify-center space-y-12 w-1/2 ">
+      <div className="flex flex-col justify-center space-y-12 w-full lg:w-1/2 ">
         <div className="text-4xl">
           Get Started
           <br />
@@ -47,8 +47,8 @@ const GetStarted = () => {
         </div>
         <div className="text-center">So why wait any longer?</div>
       </div> */}
-      <div className="flex items-end w-1/2 ">
-        <Image src={phone} alt="phone" className="ml-10" />
+      <div className="flex justify-center lg:items-end w-full  lg:w-1/2 ">
+        <Image src={phone} alt="phone" className="ml-10 " />
       </div>
     </div>
   );

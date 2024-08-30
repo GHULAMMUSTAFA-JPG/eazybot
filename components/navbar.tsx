@@ -1,19 +1,124 @@
-import React from "react";
+"use client";
+// import React from "react";
+// import Image from "next/image";
+// import Link from "next/link";
+// import Eazybot from "@/public/images/Eazybot-Logo.png";
+
+// const Navbar = () => {
+//   return (
+//     <div className="bg-[#FFFFFF] py-2 font-light px-8 text-sm">
+//       <div className="flex justify-around items-center">
+//         <div id="nav-logo">
+//           <Image src={Eazybot} alt="logo" height={180} width={180} />
+//         </div>
+//         <div id="nav-navigation" className="flex">
+//           <ul className="flex flex-row space-x-12">
+//             <li>
+//               <Link href="#" className="text-[#1CC1F4] ">
+//                 Home
+//               </Link>
+//             </li>
+//             <li>
+//               <Link href="#" className="hover:text-hcolor">
+//                 About Us
+//               </Link>
+//             </li>
+//             <li>
+//               <Link href="#" className="hover:text-hcolor">
+//                 Pricing
+//               </Link>
+//             </li>
+//             <li>
+//               <Link href="#" className="hover:text-hcolor">
+//                 Contact Us
+//               </Link>
+//             </li>
+//             <li>
+//               <Link href="#" className="hover:text-hcolor">
+//                 Help
+//               </Link>
+//             </li>
+//             <li>
+//               <Link
+//                 href="#"
+//                 className="border-2 border-black rounded-full px-6 py-3"
+//               >
+//                 LOGIN
+//               </Link>
+//             </li>
+//           </ul>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Navbar;
+
+{
+  /* <div id="nav-navigation" className="hidden md:flex">
+          <ul className="flex flex-row space-x-12">
+            <li>
+              <Link href="#" className="text-[#1CC1F4]">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="hover:text-hcolor">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="hover:text-hcolor">
+                Pricing
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="hover:text-hcolor">
+                Contact Us
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="hover:text-hcolor">
+                Help
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="#"
+                className="border-2 border-black rounded-full px-6 py-3"
+              >
+                LOGIN
+              </Link>
+            </li>
+          </ul>
+        </div> */
+}
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Eazybot from "@/public/images/Eazybot-Logo.png";
+import BotIcon from "@/public/images/Bot-Icon.png";
+import LogoC from "@/public/images/logo-cut.png";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className="bg-[#FFFFFF] py-2 font-light px-8 text-sm">
-      <div className="flex justify-around items-center">
+      {/* Desktop Navbar */}
+      <div className="hidden md:flex justify-around items-center">
         <div id="nav-logo">
           <Image src={Eazybot} alt="logo" height={180} width={180} />
         </div>
         <div id="nav-navigation" className="flex">
           <ul className="flex flex-row space-x-12">
             <li>
-              <Link href="#" className="text-[#1CC1F4] ">
+              <Link href="#" className="text-[#1CC1F4]">
                 Home
               </Link>
             </li>
@@ -48,6 +153,98 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
+
+      {/* Mobile Navbar */}
+      <div className="flex md:hidden justify-between items-center">
+        <div id="nav-logo">
+          <Image
+            src={LogoC}
+            alt="logo"
+            height={80}
+            width={120}
+            // className="border-2 border-black"
+          />
+        </div>
+        <div>
+          <Image
+            src={BotIcon}
+            alt="logo"
+            height={100}
+            width={90}
+            // className="border-2 border-black"
+          />
+        </div>
+        <button onClick={toggleMenu} className="text-black focus:outline-none">
+          {/* Stack Icon */}
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      {/* Mobile Dropdown Menu */}
+      {isOpen && (
+        <div className="flex flex-col py-3 w-full md:hidden mt-4">
+          <ul className="flex flex-col justify-center items-center space-y-4 text-sm w-full">
+            <li className="w-full">
+              <Link
+                href="#"
+                className="text-white block py-3 bg-hcolor rounded-full text-center w-full"
+              >
+                Home
+              </Link>
+            </li>
+            <li className="w-full">
+              <Link
+                href="#"
+                className="text-hcolor py-3 block text-center w-full"
+              >
+                About Us
+              </Link>
+            </li>
+            <li className="w-full">
+              <Link
+                href="#"
+                className="text-hcolor py-3 block text-center w-full"
+              >
+                Pricing
+              </Link>
+            </li>
+            <li className="w-full">
+              <Link
+                href="#"
+                className="text-hcolor py-3 block text-center w-full"
+              >
+                Contact Us
+              </Link>
+            </li>
+            <li className="w-full">
+              <Link
+                href="#"
+                className="text-hcolor py-3 block text-center w-full"
+              >
+                Help
+              </Link>
+            </li>
+            <li className="w-full">
+              <Link href="#" className="text-hcolor block text-center w-full">
+                LOGIN
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
     </div>
   );
 };

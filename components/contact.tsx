@@ -16,20 +16,21 @@ import {
 const Contact = () => {
   return (
     <div
-      className="w-full h-[500px] px-48 bg-no-repeat bg-center bg-contain py-10 flex "
+      className="w-full h-[500px] px-6 xl:px-48 bg-no-repeat bg-bottom lg:bg-center bg-contain py-10 flex "
       style={{
         backgroundImage: `url(${circle.src})`,
         // backgroundSize: "contain",
         // backgroundPosition: "bottom",
       }}
     >
-      <div className="flex w-full">
-        <div className="flex flex-col-2 w-1/2    ">
+      <div className="flex flex-row w-full  ">
+        <div className="flex flex-col gap-y-6 md:gap-y-0 order-first md:order-none  md:flex-col-2 w-1/2    ">
           <div className="flex flex-col justify-center items-start w-2/3  space-y-4">
             <div className="font-semibold text-lg">Our Mission</div>
             <div className="leading-6 font-light text-sm tracking-wide">
               Accelerating an Eazy transition into Crypto
-              <br /> by providing an opportunity to everyone
+              <br className="hidden md:block" /> by providing an opportunity to
+              everyone
             </div>
             <div className="font-semibold text-lg">Contact Support</div>
             <div className="leading-6 font-light text-sm tracking-wide">
@@ -48,7 +49,7 @@ const Contact = () => {
             </div>
           </div>
           {/* <div className="flex flex-col justify-around space-y-12 items-center leading-6 font-light text-sm tracking-wide"> */}
-          <ul className="flex flex-col justify-center space-y-6 items-start text-center leading-6 font-light text-sm tracking-wide">
+          <ul className="flex flex-row md:flex-col md:justify-center gap-x-3 gap-y-3 md:gap-y-6 items-start text-center leading-6 font-light text-sm tracking-wide">
             <li>
               <Link href="#" className="text-gray-500 hover:text-hcolor">
                 Home
@@ -74,10 +75,10 @@ const Contact = () => {
         </div>
         <div
           id="icons-logo"
-          className="flex flex-col justify-around items-center w-1/2"
+          className="flex flex-col justify-evenly md:justify-around items-center w-auto lg:w-1/2"
         >
           <div className="flex items-start justify-center h-fit w-full">
-            <ul className="flex flex-row items-start justify-center w-fit space-x-10">
+            <ul className="flex flex-row items-start justify-center w-fit sm:space-x-4 md:space-x-8 lg:space-x-10">
               <li className="px-3 py-3 text-lg border-2 border-hcolor rounded-full text-gray-600 hover:text-hcolor">
                 <Link href="#">
                   <FaFacebookF />

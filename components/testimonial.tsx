@@ -98,8 +98,8 @@ const Carousel = () => {
 
 const Testimonial = () => {
   return (
-    <div className="h-[400px] px-48 bg-white flex flex-col justify-start pt-20">
-      <div className="text-4xl leading-normal font-semibold">
+    <div className="h-[400px] lg:px-48 bg-white flex flex-col justify-start pt-20">
+      <div className="text-2xl md:text-3xl lg:text-4xl leading-normal font-semibold">
         <span className="text-hcolor">The Proof?</span> Listen To
         <br /> What These People Are Saying…
       </div>
