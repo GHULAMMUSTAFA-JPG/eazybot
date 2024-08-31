@@ -7,12 +7,12 @@ import circle from "@/public/images/circle-footer.png";
 const About = () => {
   return (
     <div
-      className="flex justify-start items-center w-full min-h-screen"
-      style={{
-        backgroundImage: `url(${circle.src})`,
-        backgroundSize: "cover",
-        backgroundPosition: "bottom",
-      }}
+      className="flex justify-start items-center bg-[#F5F9FE] w-full min-h-screen"
+      // style={{
+      //   backgroundImage: `url(${circle.src})`,
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "bottom",
+      // }}
     >
       <div className="flex flex-col lg:flex-row justify-between w-full h-full">
         <div className="w-full lg:w-1/2 max-h-fit  order-last lg:order-first relative lg:min-h-screen">

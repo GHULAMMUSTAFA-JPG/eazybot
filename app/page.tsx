@@ -1,17 +1,17 @@
 import React from "react";
 import Image from "next/image";
-import Navbar from "@/components/navbar";
-import Hero from "@/components/hero";
-import CrypTotrading from "@/components/cryptotrading";
-import TradingBot from "@/components/tradingbot";
-import StartLearning from "@/components/startlearning";
-import AutomatedTrading from "@/components/automatedtrading";
-import Testimonial from "@/components/testimonial";
-import GetStarted from "@/components/getstarted";
-import Trade from "@/components/trade";
-import About from "@/components/about";
-import Contact from "@/components/contact";
-import Footer from "@/components/footer";
+import Navbar from "@/components/home/navbar";
+import Hero from "@/components/home/hero";
+import CrypTotrading from "@/components/home/cryptotrading";
+import TradingBot from "@/components/home/tradingbot";
+import StartLearning from "@/components/home/startlearning";
+import AutomatedTrading from "@/components/home/automatedtrading";
+import Testimonial from "@/components/home/testimonial";
+import GetStarted from "@/components/home/getstarted";
+import Trade from "@/components/home/trade";
+import About from "@/components/home/about";
+import Contact from "@/components/home/contact";
+import Footer from "@/components/home/footer";
 
 export default function Home() {
   return (

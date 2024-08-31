@@ -16,7 +16,7 @@ import {
 const Contact = () => {
   return (
     <div
-      className="w-full h-[500px] px-6 xl:px-48 bg-no-repeat bg-bottom lg:bg-center bg-contain py-10 flex "
+      className="w-full h-[500px] px-6 xl:px-48 bg-no-repeat bg-[#F5F9FE] bg-bottom lg:bg-center bg-contain py-10 flex "
       style={{
         backgroundImage: `url(${circle.src})`,
         // backgroundSize: "contain",
@@ -24,7 +24,7 @@ const Contact = () => {
       }}
     >
       <div className="flex flex-row w-full  ">
-        <div className="flex flex-col gap-y-6 md:gap-y-0 order-first md:order-none  md:flex-col-2 w-1/2    ">
+        <div className="flex flex-col md:flex-row gap-y-6 md:gap-y-0 order-first md:order-none  md:flex-col-2 w-1/2    ">
           <div className="flex flex-col justify-center items-start w-2/3  space-y-4">
             <div className="font-semibold text-lg">Our Mission</div>
             <div className="leading-6 font-light text-sm tracking-wide">

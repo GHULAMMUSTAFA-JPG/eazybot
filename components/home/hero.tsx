@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import hero from "../public/images/Hero-BackGround-1.jpg";
-import TPhones from "../public/images/Two-Phones.png";
+import hero from "@/public/images/Hero-BackGround-1.jpg";
+import TPhones from "@/public/images/Two-Phones.png";
 import Clock from "@/public/images/Grupo-18223.png";
 import Drop from "@/public/images/Grupo-18222.png";
 import Illustration from "@/public/images/Ilustracion-436.png";
@@ -36,13 +36,13 @@ export default function Hero() {
               trading&nbsp;
               <br className="hidden lg:block" />
               much easier for you. In minutes you&nbsp;
-              <span className="hidden lg:block font-semibold">
+              <span className="hidden lg:inline font-semibold">
                 can have multiple bots
                 <br className="hidden lg:block" /> deployed,
               </span>
               ready to trade on your behalf using built-in proven
-              <br className="hidden lg:block" /> strategies or
-              <span className="hidden lg:block font-semibold">
+              <br className="hidden lg:inline" /> strategies or
+              <span className="hidden lg:inline font-semibold">
                 your preferred strategy.
               </span>
             </p>

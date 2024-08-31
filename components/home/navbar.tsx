@@ -118,33 +118,33 @@ const Navbar = () => {
         <div id="nav-navigation" className="flex">
           <ul className="flex flex-row space-x-12">
             <li>
-              <Link href="#" className="text-[#1CC1F4]">
+              <Link href="/" className="text-[#1CC1F4]">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:text-hcolor">
+              <Link href="/about" className="hover:text-hcolor">
                 About Us
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:text-hcolor">
+              <Link href="/pricing" className="hover:text-hcolor">
                 Pricing
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:text-hcolor">
+              <Link href="/contactus" className="hover:text-hcolor">
                 Contact Us
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:text-hcolor">
+              <Link href="/help" className="hover:text-hcolor">
                 Help
               </Link>
             </li>
             <li>
               <Link
-                href="#"
+                href="/login"
                 className="border-2 border-black rounded-full px-6 py-3"
               >
                 LOGIN
@@ -199,7 +199,7 @@ const Navbar = () => {
           <ul className="flex flex-col justify-center items-center space-y-4 text-sm w-full">
             <li className="w-full">
               <Link
-                href="#"
+                href="/"
                 className="text-white block py-3 bg-hcolor rounded-full text-center w-full"
               >
                 Home
@@ -207,7 +207,7 @@ const Navbar = () => {
             </li>
             <li className="w-full">
               <Link
-                href="#"
+                href="about"
                 className="text-hcolor py-3 block text-center w-full"
               >
                 About Us
@@ -215,7 +215,7 @@ const Navbar = () => {
             </li>
             <li className="w-full">
               <Link
-                href="#"
+                href="/pricing"
                 className="text-hcolor py-3 block text-center w-full"
               >
                 Pricing
@@ -223,7 +223,7 @@ const Navbar = () => {
             </li>
             <li className="w-full">
               <Link
-                href="#"
+                href="/contactus"
                 className="text-hcolor py-3 block text-center w-full"
               >
                 Contact Us
@@ -231,14 +231,17 @@ const Navbar = () => {
             </li>
             <li className="w-full">
               <Link
-                href="#"
+                href="/help"
                 className="text-hcolor py-3 block text-center w-full"
               >
                 Help
               </Link>
             </li>
             <li className="w-full">
-              <Link href="#" className="text-hcolor block text-center w-full">
+              <Link
+                href="/login"
+                className="text-hcolor block text-center w-full"
+              >
                 LOGIN
               </Link>
             </li>
