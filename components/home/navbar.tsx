@@ -145,7 +145,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/login"
-                className="border-2 border-black rounded-full hover:bg-hcolor hover:border-0 px-6 py-3"
+                className="border-2 text-md font-normal border-black rounded-full hover:bg-hcolor hover:border-0 px-6 py-3"
               >
                 LOGIN
               </Link>
@@ -240,7 +240,7 @@ const Navbar = () => {
             <li className="w-full">
               <Link
                 href="/login"
-                className="text-hcolor block text-center w-full"
+                className="text-hcolor block text-md font-normal text-center w-full"
               >
                 LOGIN
               </Link>

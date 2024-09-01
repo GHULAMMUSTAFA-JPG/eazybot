@@ -204,7 +204,7 @@ const TradingBotB = () => {
         <div className="flex flex-col space-y-10 w-full lg:w-1/2  p-4">
           <div className="text-2xl lg:text-4xl font-semibold leading-normal">
             Fast-track your crypto
-            <br className="hidden lg:block" /> success
+            <br className="hidden xl:block" /> success
           </div>
 
           {/* ----------------------------------------------------- */}
@@ -248,7 +248,7 @@ const TradingBotB = () => {
         </div>
 
         {/* Right Side - Video with Background */}
-        <div className="hidden lg:flex w-full relative justify-center items-center">
+        <div className="hidden lg:flex w-[1000px] relative justify-center items-center">
           <div className="relative w-full h-0 pb-[56.25%]">
             {/* Background Image (applied to video using a wrapper) */}
             <div
