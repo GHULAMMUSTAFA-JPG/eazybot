@@ -38,8 +38,8 @@ const ContactUS = () => {
         </div>
       </div>
       <div className="flex justify-center items-center bg-white px-6 py-20 lg:p-32 ">
-        <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-start w-fit   ">
-          <div className="flex justify-start items-start md:pl-6 w-full h-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-start w-fit    ">
+          <div className="flex justify-start items-start md:pl-6 ">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14449.696761716237!2d55.3767378!3d25.1213459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f650bb0789f33%3A0xefb53b346ce43dc0!2sEazyBot!5e0!3m2!1sen!2sus!4v1699976647261!5m2!1sen!2sus"
               width="100%"

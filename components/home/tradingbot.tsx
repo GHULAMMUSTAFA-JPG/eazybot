@@ -143,20 +143,70 @@ import phone from "@/public/images/Phone-932x1024.png";
 
 export default function TradingBot() {
   return (
+    // <div
+    //   className="h-auto min-h-[1500px] lg:min-h-[1250px] flex flex-col items-start justify-start bg-none xl:bg-cover bg-local bg-center relative overflow-hidden"
+    //   style={{ backgroundImage: `url(${bgimage.src})` }}
+    // >
+    //   <div className="flex flex-col w-full  lg:flex-row xl:pl-40 mt-20 h-fit max-w-[100vw]">
+    //     <div className="flex justify-center lg:justify-end items-center w-full lg:w-1/2 ">
+    //       <Image
+    //         src={phone}
+    //         alt="phone"
+    //         className="index-10 max-w-full max-h-full w-[90%] h-auto xl:w-[600px] xl:h-[600px]"
+    //       />
+    //     </div>
+
+    //     <div className="w-full lg:w-1/2 px-4 xl:mr-32 pl-0 flex flex-col justify-center space-y-6">
+    //       <div className="text-[#2A364C] px-2 lg:px-4 leading-loose text-2xl lg:text-4xl font-semibold">
+    //         Finally, A Crypto Trading
+    //         <br className="hidden lg:block" /> Bot Made For Regular,
+    //         <br className="hidden lg:block" />
+    //         <span className="py-1 lg:py-2 px-2 rounded-lg text-white bg-[#2A364C]">
+    //           Non-Techie
+    //         </span>
+    //         &nbsp;People!
+    //       </div>
+
+    //       <p className="leading-6 px-2 lg:px-4 font-normal lg:font-light text-base lg:text-sm tracking-wide">
+    //         There are many crypto trading bots out there. However, they
+    //         <br className="hidden lg:block" /> are made for experienced traders
+    //         and/or tech-savvy people.
+    //         <br className="hidden lg:block" />
+    //         So, even though they are supposed to make trading easier, the
+    //         <br className="hidden lg:block" /> truth is, they are very
+    //         complicated.
+    //       </p>
+
+    //       <div className="leading-6 px-2 lg:px-4 font-semibold text-xl tracking-wide">
+    //         That’s why we made EazyBot; to make crypto
+    //         <br className="hidden lg:block" /> trading easy and accessible to
+    //         everyone.
+    //       </div>
+
+    //       <div className="flex justify-center items-center ">
+    //         <button className="text-white leading-6 font-base bg-hcolor text-sm tracking-wide w-full md:w-fit px-12 py-3 rounded-full shadow-2xl">
+    //           Learn more
+    //         </button>
+    //       </div>
+    //     </div>
+    //   </div>
+
+    //   <TradingBotB />
+    // </div>
     <div
-      className="h-auto min-h-[1500px] lg:min-h-[1250px] flex flex-col items-start justify-start bg-none xl:bg-cover bg-local bg-center relative overflow-hidden"
+      className="h-auto min-h-[1500px] lg:min-h-[1250px] flex flex-col items-start justify-start gap"
       style={{ backgroundImage: `url(${bgimage.src})` }}
     >
-      <div className="flex flex-col w-full  lg:flex-row xl:pl-40 mt-20 h-fit max-w-[100vw]">
-        <div className="flex justify-center lg:justify-end items-center w-full lg:w-1/2 ">
+      <div className="flex flex-col w-full lg:flex-row lg:justify-end mt-20 min-h-full max-w-[100vw] gap">
+        <div className="flex justify-center lg:justify-end items-center w-full lg:w-1/2 gap">
           <Image
             src={phone}
             alt="phone"
-            className="index-10 max-w-full max-h-full w-[90%] h-auto xl:w-[600px] xl:h-[600px]"
+            className="index-10 max-w-full h-fit w-[90%] xl:w-[600px] xl:h-[700px]"
           />
         </div>
 
-        <div className="w-full lg:w-1/2 px-4 xl:mr-32 pl-0 flex flex-col justify-center space-y-6">
+        <div className="w-full lg:w-1/2 px-4 xl:mr-20 pl-0 flex flex-col justify-center space-y-6 gap">
           <div className="text-[#2A364C] px-2 lg:px-4 leading-loose text-2xl lg:text-4xl font-semibold">
             Finally, A Crypto Trading
             <br className="hidden lg:block" /> Bot Made For Regular,
